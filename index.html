@@ -41,7 +41,7 @@ body{
   border:1px solid #ffffff18;
   color:#ddd;
   font-size:11px;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
 .dot{
@@ -52,39 +52,83 @@ body{
   box-shadow:0 0 12px #31e981;
 }
 
-/* LOGO */
+/* PERFECT ROUND IMAGE */
 .logo-wrap{
   position:relative;
-  width:108px;
-  height:108px;
-  margin:auto;
+  width:116px;
+  height:116px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .logo-glow{
   position:absolute;
-  inset:-12px;
+  inset:-14px;
   border-radius:50%;
-  background:linear-gradient(135deg,#ffd84a,#ffb300,#229ed9);
-  filter:blur(22px);
-  opacity:.35;
+  background:linear-gradient(
+    135deg,
+    #ffd84a,
+    #ffb300,
+    #229ed9
+  );
+  filter:blur(24px);
+  opacity:.38;
 }
 
-.logo{
+/* OUTER RING */
+.logo-ring{
   position:relative;
-  width:108px;
-  height:108px;
+  width:116px;
+  height:116px;
+  padding:4px;
   border-radius:50%;
-  object-fit:cover;
-  border:3px solid #f5c542;
+  background:linear-gradient(
+    135deg,
+    #ffe36b,
+    #f5b900,
+    #229ed9
+  );
   box-shadow:
     0 0 0 4px #ffffff0b,
-    0 0 28px #f5c54255;
+    0 0 32px #f5c54266;
+  overflow:hidden;
+}
+
+/* IMAGE ITSELF */
+.logo{
+  display:block;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center center;
+  background:#101722;
+}
+
+/* VERIFIED DOT */
+.verify{
+  position:absolute;
+  right:-1px;
+  bottom:1px;
+  width:27px;
+  height:27px;
+  border-radius:50%;
+  background:#20d77b;
+  border:3px solid #070b12;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  font-weight:bold;
+  box-shadow:0 0 12px #20d77b88;
 }
 
 /* TITLE */
 h1{
   font-size:23px;
-  margin-top:17px;
+  margin-top:18px;
   font-weight:800;
 }
 
@@ -233,26 +277,26 @@ h1{
   line-height:1.55;
 }
 
-/* ADNOVA FOOTER */
+/* ADNOVA */
 .agency{
-  margin-top:14px;
-  padding-bottom:2px;
+  margin-top:12px;
+  padding-bottom:3px;
 }
 
 .agency a{
-  color:#7f8794;
+  color:#727b89;
   text-decoration:none;
   font-size:9px;
   letter-spacing:.3px;
 }
 
-.agency a:hover{
-  color:#fff;
+.agency b{
+  color:#aeb7c4;
+  font-weight:600;
 }
 
-.agency b{
-  color:#aeb5c0;
-  font-weight:600;
+.agency a:hover b{
+  color:#fff;
 }
 </style>
 </head>
@@ -267,13 +311,21 @@ h1{
     LIVE • Stock Market Community
   </div>
 
-  <!-- LOGO -->
-  <div class="https://i.ibb.co/DcN3RJH/axvw23gej9sm-E3-KY6-Rmx-Igw-Os-U-B4z-VEF0kp3ty-Pu-NSD1xm-Yw2l-Mebltc0oi-Hp-Qv-Jtuz43-ZS9-Mx5-E7-M-G1-Ld11t.jpg">
-    <div class="https://i.ibb.co/DcN3RJH/axvw23gej9sm-E3-KY6-Rmx-Igw-Os-U-B4z-VEF0kp3ty-Pu-NSD1xm-Yw2l-Mebltc0oi-Hp-Qv-Jtuz43-ZS9-Mx5-E7-M-G1-Ld11t.jpg"></div>
-    <img
-      class="https://i.ibb.co/DcN3RJH/axvw23gej9sm-E3-KY6-Rmx-Igw-Os-U-B4z-VEF0kp3ty-Pu-NSD1xm-Yw2l-Mebltc0oi-Hp-Qv-Jtuz43-ZS9-Mx5-E7-M-G1-Ld11t.jpg"
-      src="/assets/king-of-nifty-logo-1gNXtAsI.png"
-      alt="King Of Nifty">
+  <!-- PERFECT ROUND LOGO -->
+  <div class="logo-wrap">
+
+    <div class="logo-glow"></div>
+
+    <div class="logo-ring">
+      <img
+        class="logo"
+        src="/assets/king-of-nifty-logo-1gNXtAsI.png"
+        alt="King Of Nifty"
+        onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#ffd43b,#229ed9)'; this.parentElement.innerHTML='<div style=&quot;width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#07111d;font-size:28px;font-weight:900;&quot;>KN</div>';">
+    </div>
+
+    <div class="verify">✓</div>
+
   </div>
 
   <!-- TITLE -->
@@ -378,7 +430,7 @@ h1{
     investment advice. Stock market investments are subject to risk.
   </div>
 
-  <!-- SMALL ADNOVA AGENCY -->
+  <!-- SMALL ADNOVA AGENCY LINK -->
   <div class="agency">
     <a
       href="YOUR_ADNOVAAGENCY_LINK"
